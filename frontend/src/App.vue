@@ -1,13 +1,23 @@
 <script setup>
+import { ref } from 'vue';
+import MenuIcon from './assets/icons/MenuIcon.vue';
+const colorSchema = ref("default")
 </script>
 
 <template>
-  <header>
-    <h1>Header</h1>
+  <header :class="colorSchema">
+    <nav>
+    <p>News</p>
+    <p>Reiseberichte</p>
+    <p>TechnikLexikon</p>
+    <p>Produkte</p>
+    <p>Forum</p>
+    <MenuIcon />
+    </nav>
   </header>
 
-  <main>
-    <h1>Welcome</h1>
+  <main :class="colorSchema">
+    <p>Welcome</p>
   </main>
 </template>
 
