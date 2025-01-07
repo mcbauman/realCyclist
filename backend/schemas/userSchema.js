@@ -7,14 +7,22 @@ const userSchema=new mongoose.Schema({
     colorSchema:{type:String, enum:["default"]}
 },
 {
-    toJSON:{
-        transform(doc,ret){
-            delete ret.__v
+    toObject: {
+        transform: function (doc, ret) {
             delete ret.password
+            delete ret.__v
+        }
+      },
+    toJSON:{
+        transform: function(doc,ret,options){
+            delete ret.password
+            delete ret.__v
         }
     }
-})
+}
+)
 
-const UserSchema=mongoose.model("Users",userSchema)
+module.exports = mongoose.model("Users", userSchema)
+// const UserSchema=mongoose.model("Users",userSchema)
 
-module.exports = UserSchema;
+// module.exports = UserSchema;
