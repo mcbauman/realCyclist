@@ -1,0 +1,13 @@
+@url=http://localhost:9000
+
+GET {{url}}
+
+### POST
+POST {{url}}
+Content-Type: application/json
+
+{
+  "Wartungsprotokoll":"categories123",
+  "Montagebericht":"categories123",
+  "Übergabeprotokoll":"categories123"
+}
