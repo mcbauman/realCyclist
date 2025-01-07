@@ -1,13 +1,28 @@
-@url=http://localhost:9000
+@url=http://localhost:9002
+@token=Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NzdkMThlOGZhNWQ1MDE2NWIxZDE4ODEiLCJpYXQiOjE3MzYyNTE3MTMsImV4cCI6MTczNjMzODExM30.kY8J1ZtET63a5bb-glf_-UB_nvTVbAy9NKvMbbKkSoI
 
 GET {{url}}
 
-### POST
-POST {{url}}
+### GET ALL USERS
+GET {{url}}/user/getAllUsers
+{{token}}
+
+###POST NEW USER
+POST {{url}}/user/createUser
 Content-Type: application/json
 
 {
-  "Wartungsprotokoll":"categories123",
-  "Montagebericht":"categories123",
-  "Übergabeprotokoll":"categories123"
+  "name":"m.c.baumann@icloud.com",
+  "password":"ABC123!",
+  "role":"admin",
+  "colorSchema":"default"
+}
+
+### Login
+POST {{url}}/user/login
+Content-Type: application/json
+
+{
+  "name":"m.c.baumann@icloud.com",
+  "password":"ABC123!"
 }
