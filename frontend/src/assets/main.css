@@ -44,3 +44,22 @@ main{
   background-color: var(--mainBG);
   color: var(--mainText);
 }
+
+@media only screen and (min-width:800px) {
+  #menuIcon{
+    display: none;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  nav{
+    flex-direction: column;
+  }
+  .hide{
+    display: none;
+  }
+  .show{
+    display: flex;
+    flex-direction: column;
+  }
+}

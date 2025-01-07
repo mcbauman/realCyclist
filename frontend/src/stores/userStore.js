@@ -19,5 +19,10 @@ export const useUSerStore = defineStore('user', () => {
     })
   }
 
-  return { user, login }
+  function logout(){
+    localStorage.removeItem("user")
+    user.value=null
+  }
+
+  return { user, login, logout }
 })
