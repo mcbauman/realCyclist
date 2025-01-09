@@ -3,6 +3,10 @@
   --headerText:rgb(226, 226, 226);
   --mainBG:rgb(226, 226, 226);
   --mainText:black;
+  --articleHeaderBG:rgb(136, 136, 136);
+  --articleHeaderText:white;
+  --articleBG:white;
+  --articleText:black;
 }
 
 body{
@@ -43,6 +47,16 @@ main{
   padding: 0 20px;
   background-color: var(--mainBG);
   color: var(--mainText);
+}
+
+article{
+  margin: 20px 0;
+}
+
+.articleHeader{
+  background-color: var(--articleHeaderBG);
+  color: var(--articleHeaderText);
+  padding:10px;
 }
 
 @media only screen and (min-width:800px) {

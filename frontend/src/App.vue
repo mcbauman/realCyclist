@@ -2,7 +2,9 @@
 import { ref } from 'vue';
 import MenuIcon from './assets/icons/MenuIcon.vue';
 import LeaveIcon from './assets/icons/LeaveIcon.vue';
+import ArticleComponent from './components/ArticleComponent.vue';
 import { useUSerStore } from './stores/userStore';
+import {articles} from "./stores/articles"
 const userStore=useUSerStore()
 const colorSchema = ref("default")
 const menuOpen = ref("hide")
@@ -28,7 +30,7 @@ const loginData = ref({})
   </header>
 
   <main :class="colorSchema">
-  <p>Welcome</p>
+    <ArticleComponent v-for="articleContent in articles" :articleContent="articleContent" />
   </main>
 </template>
 
