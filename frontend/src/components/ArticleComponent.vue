@@ -2,7 +2,7 @@
 const props = defineProps(["articleContent"]);
 </script>
 <template>
-  <article class="articleBody">
+  <article>
     <!-- <img v-if="articleContent.mainpicture" src="../assets/pictures/torgeFirstTraining2025.jpg" :alt="articleContent.mainpicture"> -->
     <img
       v-if="articleContent.mainpicture"
