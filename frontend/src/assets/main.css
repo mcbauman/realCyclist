@@ -51,12 +51,33 @@ main{
 
 article{
   margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 3px var(--articleHeaderBG);
 }
 
 .articleHeader{
   background-color: var(--articleHeaderBG);
   color: var(--articleHeaderText);
   padding:10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.articleHeader>h3{
+  margin: 0;
+}
+
+.articleBody{
+  background-color: var(--articleBG);
+  padding:10px;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+}
+.articleBody>p{
+  margin: 0 0 0 10px;
+}
+
+img{
+  width: 30%;
 }
 
 @media only screen and (min-width:800px) {

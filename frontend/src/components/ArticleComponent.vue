@@ -8,16 +8,16 @@ const props = defineProps(["articleContent"])
                 {{ articleContent.article.title }}
             </h3>
         </header>
-        <div class="articleBod">
-        
+        <div class="articleBody">
+            <img v-if="articleContent.mainpicture" src="../assets/pictures/torgeFirstTraining2025.jpg" :alt="articleContent.mainpicture">
+            <p>{{ articleContent.article.text }}</p>
+            <!-- <section v-for="sectionContent in articleContent.article.sections">
+                <h4>{{ sectionContent.title }}</h4>
+                <img v-if="sectionContent.picture" :src="sectionContent.picture" alt="">
+                <p>{{ sectionContent.text }}</p>
+            </section> -->
         </div>
-        <img v-if="articleContent.picture" :src="articleContent.picture">
-        <section v-for="sectionContent in articleContent.article.sections">
-            <h4>{{ sectionContent.title }}</h4>
-            <img v-if="sectionContent.picture" :src="sectionContent.picture" alt="">
-            <p>{{ sectionContent.text }}</p>
-        </section>
     </article>
     <hr>
-    {{ articleContent }}
+    <!-- {{ articleContent }} -->
 </template>

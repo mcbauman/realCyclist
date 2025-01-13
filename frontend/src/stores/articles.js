@@ -2,9 +2,10 @@ export const articles=[
     {
         date:"09.01.2025",
         kategorie:"news",
-        mainpicture:null,
+        mainpicture:"../assets/pictures/torgeFirstTraining2025.jpg",
         article:{
-            title:"wilkommen auf RealCyclists",
+            title:"first Sunshine, first training",
+            text:"Am ersten Wochenende mit richtig schönem Wetter hieß es für uns direkt ab auf's Rad, erstes Training für die große April-Fahrrad-Reise",
             sections:[
                 {
                     title:null,
