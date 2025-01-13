@@ -2,14 +2,14 @@
 const props = defineProps(["articleContent"])
 </script>
 <template>
-    <article>
+    <article class="articleBody">
+        <img v-if="articleContent.mainpicture" src="../assets/pictures/torgeFirstTraining2025.jpg" :alt="articleContent.mainpicture">
+        <div>
         <header class="articleHeader"> 
             <h3>
                 {{ articleContent.article.title }}
             </h3>
         </header>
-        <div class="articleBody">
-            <img v-if="articleContent.mainpicture" src="../assets/pictures/torgeFirstTraining2025.jpg" :alt="articleContent.mainpicture">
             <p>{{ articleContent.article.text }}</p>
             <!-- <section v-for="sectionContent in articleContent.article.sections">
                 <h4>{{ sectionContent.title }}</h4>

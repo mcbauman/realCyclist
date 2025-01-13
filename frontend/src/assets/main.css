@@ -3,8 +3,8 @@
   --headerText:rgb(226, 226, 226);
   --mainBG:rgb(226, 226, 226);
   --mainText:black;
-  --articleHeaderBG:rgb(136, 136, 136);
-  --articleHeaderText:white;
+  --articleHeaderBG:white;
+  --articleHeaderText:rgb(136, 136, 136);
   --articleBG:white;
   --articleText:black;
 }
@@ -52,7 +52,10 @@ main{
 article{
   margin: 20px 0;
   border-radius: 5px;
-  box-shadow: 0 0 3px var(--articleHeaderBG);
+  box-shadow: 0 0 3px var(--headerBG);
+  background-color: var(--articleBG);
+  /* padding:10px; */
+  display: flex;
 }
 
 .articleHeader{
@@ -67,17 +70,15 @@ article{
 }
 
 .articleBody{
-  background-color: var(--articleBG);
-  padding:10px;
-  border-radius: 0 0 5px 5px;
-  display: flex;
+
 }
-.articleBody>p{
-  margin: 0 0 0 10px;
+p{
+  margin:10px;
 }
 
 img{
   width: 30%;
+  border-radius: 5px 0 0 5px;
 }
 
 @media only screen and (min-width:800px) {
