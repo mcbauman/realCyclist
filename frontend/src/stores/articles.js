@@ -1,7 +1,7 @@
 export const articles=[
     {
         date:"12.01.2025",
-        kategorie:"news",
+        kategorie:"reise",
         mainpicture:"../../public/pictures/torgeFirstTraining2025.jpg",
         article:{
             title:"first Sunshine, first training",
@@ -34,7 +34,7 @@ export const articles=[
     {
         date:"13.01.2025",
         kategorie:"technik",
-        mainpicture:"../../public//pictures/torgeFirstTraining2025.jpg",
+        mainpicture:false,
         article:{
             title:"Alles um Nabenschaltungen",
             text:"Viele Radler schwören auf Sie, an Rennrädern sind Sie die absolute Ausnahme: Nabenschaltungen. Für wen sind Sie die richtige Wahl? Wo liegen Vor- und Nachteile und welche Modelle sind interessant?",
@@ -49,7 +49,7 @@ export const articles=[
     },
     {
         date:"13.01.2025",
-        kategorie:"technik",
+        kategorie:"produkte",
         mainpicture:"../../public//pictures/torgeFirstTraining2025.jpg",
         article:{
             title:"Alles um Nabenschaltungen",

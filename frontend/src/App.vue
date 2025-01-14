@@ -12,15 +12,26 @@ const settingsStore = useSettingsStore();
 const colorSchema = ref("default");
 const menuOpen = ref("hide");
 const loginData = ref({});
+const articlesToShow=ref(articles)
+const active = ref("news")
+
+function changeView(term){
+  articlesToShow.value=articles.filter(article=>article.kategorie===term)
+  active.value=term
+}
+function resetView(){
+  articlesToShow.value=articles
+  active.value="news"
+}
 </script>
 
 <template>
   <header :class="colorSchema" id="mainHeader">
     <nav>
-      <p :class="menuOpen">News</p>
-      <p :class="menuOpen">Reiseberichte</p>
-      <p :class="menuOpen">TechnikLexikon</p>
-      <p :class="menuOpen">Produkte</p>
+      <p :class="menuOpen" @click.prevent="resetView()">News</p>
+      <p :class="menuOpen" @click.prevent="changeView('reise')">Reiseberichte</p>
+      <p :class="menuOpen" @click.prevent="changeView('technik')">TechnikLexikon</p>
+      <p :class="menuOpen" @click.prevent="changeView('produkte')">Produkte</p>
       <p :class="menuOpen" v-if="userStore.user">Forum</p>
       <span v-else :class="menuOpen">
         <input type="email" placeholder="email" v-model="loginData.name" />
@@ -49,7 +60,7 @@ const loginData = ref({});
   <main :class="colorSchema">
     <ContentModal v-if="settingsStore.modalContent" />
     <ArticleComponent
-      v-for="articleContent in articles"
+      v-for="articleContent in articlesToShow"
       :articleContent="articleContent"
     />
   </main>
