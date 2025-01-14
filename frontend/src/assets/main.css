@@ -7,6 +7,7 @@
   --articleHeaderText:rgb(136, 136, 136);
   --articleBG:white;
   --articleText:black;
+  --fadeOut:rgba(226, 226, 226, 0.4);
 }
 
 body{
@@ -22,7 +23,7 @@ body{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-header{
+#mainHeader{
   position: sticky;
   top:0px;
   display: flex;
@@ -31,6 +32,7 @@ header{
   background-color: var(--headerBG);
   color: var(--headerText);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 nav{
@@ -47,6 +49,27 @@ main{
   padding: 0 20px;
   background-color: var(--mainBG);
   color: var(--mainText);
+}
+
+#contentModalBackground{
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--faceOut);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#contentModal{
+  border-radius: 5px;
+  background-color: var(--articleBG);
+  margin: 40px;
+  padding:20px;
+  height: fit-content;
+  width: 100%;
+  box-shadow: 0 0 3px var(--headerBG);
 }
 
 article{
@@ -68,15 +91,15 @@ article:hover{
   color: var(--articleHeaderText);
   padding:10px;
   border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .articleHeader>h3{
   margin: 0;
 }
 
-.articleBody{
-
-}
 p{
   margin:10px;
 }

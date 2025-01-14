@@ -1,8 +1,10 @@
 <script setup>
 const props = defineProps(["articleContent"]);
+import { useSettingsStore } from '@/stores/settingsStore';
+const settingsStore = useSettingsStore()
 </script>
 <template>
-  <article>
+  <article @click.prevent="settingsStore.setModalContent(articleContent)">
     <!-- <img v-if="articleContent.mainpicture" src="../assets/pictures/torgeFirstTraining2025.jpg" :alt="articleContent.mainpicture"> -->
     <img
       v-if="articleContent.mainpicture"
