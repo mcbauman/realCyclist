@@ -12,7 +12,7 @@ import LeaveIcon from '@/assets/icons/LeaveIcon.vue';
             </header>
             <section v-for="paragraph in settingsStore.modalContent.article.sections">
                 <h2>{{ paragraph.title }}</h2>
-                <img src="" alt="paragraph.picture">
+                <img v-if="paragraph.picture" v-bind:src="paragraph.picture" alt="paragraph.picture">
                 <p>{{ paragraph.text }}</p>
             </section>
         </section>
