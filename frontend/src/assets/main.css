@@ -72,6 +72,10 @@ main{
   box-shadow: 0 0 3px var(--headerBG);
 }
 
+.modalParagraph{
+  display: flex;
+}
+
 article{
   margin: 20px 0;
   border-radius: 5px;
@@ -88,16 +92,18 @@ article:hover{
 
 .articleHeader{
   background-color: var(--articleHeaderBG);
-  color: var(--articleHeaderText);
-  padding:10px;
+  /* color: var(--articleHeaderText);
+  padding:10px; */
   border-radius: 5px 5px 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.articleHeader>h3{
+h1,h2,h3{
   margin: 0;
+  color: var(--articleHeaderText);
+  padding:10px;
 }
 
 p{
